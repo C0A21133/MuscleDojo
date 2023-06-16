@@ -1,4 +1,4 @@
-- てすと
+- てすと y
 - test(yajima)
 - test(yajimama)
 - test(yajipapa)
