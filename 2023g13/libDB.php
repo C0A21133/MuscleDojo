@@ -6,7 +6,7 @@ class libDB{
      */
     public function __construct()
     {
-        $this->pdo = new PDO("mysql:host=localhost;dbname=2022gxx;charset=utf8","root","", 
+        $this->pdo = new PDO("mysql:host=localhost;dbname=2022g13;charset=utf8","root","", 
         [PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING]);
 
     }
