@@ -6,7 +6,7 @@
     </head>
     <body>
         <h1>トレーニング情報を追加する。</h1>
-        <form action="" method="post">
+        <form action="../muscle/DBtrainingeAddProcess.php" method="post">
 
         トレーニング名
         ：<input type="text" name="name" required>
@@ -41,8 +41,8 @@
         解説：<font color="#ff0000">*必須</font><br>
         <textarea name="desc" cols="100" rows="30"></textarea><br>
 
-        解説：<font color="#ff0000">*必須</font><br>
-        <textarea name="desc" cols="100" rows="30"></textarea><br>
+        注意事項：<font color="#ff0000">*必須</font><br>
+        <textarea name="point" cols="100" rows="30"></textarea><br>
         <input type="submit" value="追加">
 
 
