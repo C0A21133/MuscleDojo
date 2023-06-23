@@ -45,7 +45,6 @@
         <textarea name="point" cols="100" rows="30"></textarea><br>
         <input type="submit" value="追加">
 
-
         </form>
     </body>
 </html>
