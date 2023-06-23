@@ -22,13 +22,13 @@
         <font color="ff0000">*必須</font><br>
         目的
         :<font color="#ff0000">*必須</font><br>
-        <input type="checkbox" name="part[]" value="バルクアップをしたい">バルクアップをしたい
-        <input type="checkbox" name="part[]" value="細マッチョを目指す">細マッチョを目指す
-        <input type="checkbox" name="part[]" value="ダイエットをしたい">ダイエットをしたい<br>
+        <input type="checkbox" name="target[]" value="バルクアップをしたい">バルクアップをしたい
+        <input type="checkbox" name="target[]" value="細マッチョを目指す">細マッチョを目指す
+        <input type="checkbox" name="target[]" value="ダイエットをしたい">ダイエットをしたい<br>
         説明
         :<font color="#ff0000">*必須</font><br>
         <textarea name="desc" cols="100" rows="30"></textarea><br>
         <input type="submit" value="追加">
-        
+
     </body>
 </html>
