@@ -29,21 +29,23 @@
     </head>
     <body onload='Draw()'>
     <div class="canvas-wrap" id="canvasdiv">
-        <canvas  id="canvas" width="282" height="400" class="canvas"></canvas>
+        <canvas  id="frontCanvas" width="282" height="400" class="canvas"></canvas>
         <!-- スクリプトで描写するほうが記述量が少ないが、描写する部分はまとめて記述したいのでHTMLで記述した -->
-        <canvas  id="0canvas" width="282" height="400" class="canvas"></canvas>
-        <canvas  id="1canvas" width="282" height="400" class="canvas"></canvas>
-        <canvas  id="2canvas" width="282" height="400" class="canvas"></canvas>
-        <canvas  id="3canvas" width="282" height="400" class="canvas"></canvas>
-        <canvas  id="4canvas" width="282" height="400" class="canvas"></canvas>
-        <canvas  id="5canvas" width="282" height="400" class="canvas"></canvas>
-        <canvas  id="6canvas" width="282" height="400" class="canvas"></canvas>
-        <canvas  id="7canvas" width="282" height="400" class="canvas"></canvas>
+        <!-- 画像を増やす場合、idの先頭の数字を一つづつ増やした<canvas>をコピペで記述
+            startPage.js の frontMuscleArray配列に パスを追記。
+            clickOnCanvas()とmoveOnCanvas()に行いたい処理を記述すること -->
+        <canvas  id="0frontCanvas" width="282" height="400" class="canvas"></canvas>
+        <canvas  id="1frontCanvas" width="282" height="400" class="canvas"></canvas>
+        <canvas  id="2frontCanvas" width="282" height="400" class="canvas"></canvas>
+        <canvas  id="3frontCanvas" width="282" height="400" class="canvas"></canvas>
+        <canvas  id="4frontCanvas" width="282" height="400" class="canvas"></canvas>
+        <canvas  id="5frontCanvas" width="282" height="400" class="canvas"></canvas>
+        <canvas  id="6frontCanvas" width="282" height="400" class="canvas"></canvas>
+        <canvas  id="7frontCanvas" width="282" height="400" class="canvas"></canvas>
 
         <!-- 判定用のキャンバス -->
-        <canvas  id="frontjudgecanvas" width="282" height="400" class="canvas"></canvas>
+        <canvas  id="frontJudgeCanvas" width="282" height="400" class="canvas"></canvas>
     </div>
-        <text id="textarea"></text>
         <script src="../Script/StartPage.js"></script>
     </body>
     
