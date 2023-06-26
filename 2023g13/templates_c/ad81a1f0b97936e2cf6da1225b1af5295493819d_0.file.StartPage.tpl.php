@@ -1,4 +1,27 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 3.1.39, created on 2023-06-26 08:09:52
+  from 'C:\xampp\htdocs\pnw\MuscleDojo\2023g13\templates\StartPage.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.39',
+  'unifunc' => 'content_64992bb0996ef8_77684972',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'ad81a1f0b97936e2cf6da1225b1af5295493819d' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\pnw\\MuscleDojo\\2023g13\\templates\\StartPage.tpl',
+      1 => 1687759612,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_64992bb0996ef8_77684972 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html>
     <head>
     <meta charset="utf-8">
@@ -44,7 +67,10 @@
         <canvas  id="frontjudgecanvas" width="282" height="400" class="canvas"></canvas>
     </div>
         <text id="textarea"></text>
-        <script src="../Script/StartPage.js"></script>
+        <?php echo '<script'; ?>
+ src="../Script/StartPage.js"><?php echo '</script'; ?>
+>
     </body>
     
-</html>
+</html><?php }
+}
