@@ -1,5 +1,5 @@
 //PHPを用いて、PHPからResources/Images内のファイルを送信することで、
-//ここで定義する必要はなくなるが、実力不足のためかんすう
+//ここで定義する必要はなくなるが、実力不足のため未実装
 frontMuscleArray = [
 	"/FrontMusclePart/Abs.png", "/FrontMusclePart/Calf.png", "/FrontMusclePart/LowerArm.png",
 	"/FrontMusclePart/Nape.png", "/FrontMusclePart/Pectoral.png", "/FrontMusclePart/Shoulder.png",
