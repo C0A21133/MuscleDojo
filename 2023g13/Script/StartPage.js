@@ -1,5 +1,6 @@
 //PHPを用いて、PHPからResources/Images内のファイルを送信することで、
 //ここで定義する必要はなくなるが、実力不足のため未実装
+//画像を変更する場合この配列を変更
 frontMuscleArray = [
 	"/FrontMusclePart/Abs.png", "/FrontMusclePart/Calf.png", "/FrontMusclePart/LowerArm.png",
 	"/FrontMusclePart/Nape.png", "/FrontMusclePart/Pectoral.png", "/FrontMusclePart/Shoulder.png",
