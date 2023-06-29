@@ -39,9 +39,9 @@
         <input type="checkbox" name="target[]" value="ダイエットをしたい">ダイエットをしたい<br>
 
         解説：<font color="#ff0000">*必須</font><br>
-        <textarea name="desc" cols="100" rows="30"></textarea><br>
+        <textarea name="desc" cols="100" rows="30" required></textarea><br>
 
-        注意事項：<font color="#ff0000">*必須</font><br>
+        注意事項：<br>
         <textarea name="point" cols="100" rows="30"></textarea><br>
         <input type="submit" value="追加">
 
