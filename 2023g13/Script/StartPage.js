@@ -5,6 +5,10 @@ frontMuscleArray = [
 	"/FrontMusclePart/Nape.png", "/FrontMusclePart/Pectoral.png", "/FrontMusclePart/Shoulder.png",
 	"/FrontMusclePart/Thigh.png", "/FrontMusclePart/UpperArm.png"];
 
+backMuscleArray = [
+	"/BackMusclePart/Ass.png", "/BackMusclePart/Spine.png"
+];
+
 //frontMuscleArray内の要素の数だけImage()をつくり
 //一つの画像に対して一つのキャンバスを生成する
 //キャンバスの透過度からクリックした画像を判定するため
@@ -14,10 +18,20 @@ frontCanvasArray = Array(frontMuscleArray.length);
 frontImageArray = Array(frontMuscleArray.length);
 frontContextArray = Array(frontMuscleArray.length);
 
+backCanvasArray = Array(backMuscleArray.length);
+backImageArray = Array(backMuscleArray.length);
+backContextArray = Array(backMuscleArray.length);
+
 //キャンバスに画像を描写する
 function Draw()
 {
 	path = "../Resources/Images"
+	frontDraw(path);
+	backDraw(path);
+}
+
+function frontDraw(path)
+{
 	var canvas = document.getElementById('frontCanvas');
 	if( !canvas || !canvas.getContext )
 	{
@@ -42,7 +56,36 @@ function Draw()
 		frontImageArray[index].onload = function onImageLoad(){
 			frontContextArray[index].drawImage(frontImageArray[index], 0,0);
 		}	
-		console.log(frontImageArray[index]);
+	}
+}
+
+function backDraw(path)
+{
+	var canvas = document.getElementById('backCanvas');
+	if( !canvas || !canvas.getContext )
+	{
+		console.log("load miss");
+		return false;
+	}
+	var context = canvas.getContext("2d");
+	context.globalAlpha = 0.5;
+    var img = new Image();
+	img.src = path + "/Back.png"; //相対URLの場
+    img.onload = function onImageLoad() {
+        context.drawImage(img, 0, 0);
+	}
+
+	for (let index = 0; index < backMuscleArray.length; index++) 
+	{
+		backCanvasArray[index] = document.getElementById(index.toString()+"backCanvas");
+		backContextArray[index] = backCanvasArray[index].getContext("2d");
+		
+		var filepath = backMuscleArray[index];
+		backImageArray[index] = new Image();
+		backImageArray[index].src = path + filepath;
+		backImageArray[index].onload = function onImageLoad(){
+			backContextArray[index].drawImage(backImageArray[index], 0,0);
+		}	
 	}
 }
 
@@ -52,7 +95,7 @@ frontCanvas.addEventListener('click', (e) => {
     var rect = e.target.getBoundingClientRect();
     var x = e.clientX - rect.left;
     var y = e.clientY - rect.top;
-	clickOnCanvas(x,y);
+	clickOnFrontCanvas(x,y);
 });
 
 //キャンバスでマウスを動かしたときの座標を取得して、moveOnCanvasを実行
@@ -60,13 +103,31 @@ frontCanvas.addEventListener('mousemove', (e) =>{
 	var rect = e.target.getBoundingClientRect();
     var x = e.clientX - rect.left;
     var y = e.clientY - rect.top;
-	moveOnCanvas(x,y);
+	moveOnFrontCanvas(x,y);
 })
 
+//キャンバスでクリックした時のマウスの座標を取得して、clickOnCanvasを実行
+const backCanvas = document.getElementById("backJudgeCanvas");
+backCanvas.addEventListener('click', (e) => {
+    var rect = e.target.getBoundingClientRect();
+    var x = e.clientX - rect.left;
+    var y = e.clientY - rect.top;
+	clickOnBackCanvas(x,y);
+});
+
+//キャンバスでマウスを動かしたときの座標を取得して、moveOnCanvasを実行
+backCanvas.addEventListener('mousemove', (e) =>{
+	var rect = e.target.getBoundingClientRect();
+    var x = e.clientX - rect.left;
+    var y = e.clientY - rect.top;
+	moveOnBackCanvas(x,y);
+})
+
+
 //キャンバス上でクリックしたときの処理
-function clickOnCanvas(x, y)
+function clickOnFrontCanvas(x, y)
 {
-	let id = judgePart(x, y);
+	let id = judgeFrontPart(x, y);
 	if(id == undefined) return;
 	let text;
 	switch (id) {
@@ -97,14 +158,41 @@ function clickOnCanvas(x, y)
 		default:
 			text = "無";
 			break;
+		
 	}
 	alert(text+"を選択した");
 }
 
 //キャンバス上でマウスが動いたときの処理
-function moveOnCanvas(x, y)
+function moveOnFrontCanvas(x, y)
 {
-	let id = judgePart(x, y);
+	let id = judgeFrontPart(x, y);
+	if(id == undefined) return;
+	//以下に画像上にマウスが存在する時の処理を記述
+}
+
+function clickOnBackCanvas(x, y)
+{
+	let id = judgeBackPart(x, y);
+	if(id == undefined) return;
+	let text;
+	switch (id) {
+		case "0backCanvas":
+			text = "尻";
+			break;
+		case "1backCanvas":
+			text = "背中";
+			break;
+		default:
+			text = "無";
+			break;
+	}
+	alert(text+"を選択した");
+}
+
+function moveOnBackCanvas(x, y)
+{
+	let id = judgeBackPart(x, y);
 	if(id == undefined) return;
 	//以下に画像上にマウスが存在する時の処理を記述
 }
@@ -114,7 +202,7 @@ function moveOnCanvas(x, y)
 * 引数；x,y はクリックしたマウスの座標
 * 戻り値 ：クリックした場所が透明でない画像が描写されているキャンバスのid (string)
 */
-function judgePart(x, y)
+function judgeFrontPart(x, y)
 {
 	let result;
 	frontCanvasArray.forEach(canvas => {
@@ -131,3 +219,19 @@ function judgePart(x, y)
 	return result;
 }
 
+function judgeBackPart(x, y)
+{
+	let result;
+	backCanvasArray.forEach(canvas => {
+		var context = canvas.getContext("2d");
+		var imagedata = context.getImageData(x, y, 1, 1);
+		
+		//  RGBAの取得 alphaが0の時 画像の（x,y）は透明
+    	var alpha = imagedata.data[3];
+		if (alpha != 0)
+		{
+			result = canvas.id.toString();
+		}
+	});
+	return result;
+}
