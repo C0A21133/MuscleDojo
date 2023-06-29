@@ -9,6 +9,8 @@
             position: relative;
             padding: 0;
             box-sizing: content-box;
+            top:0px;
+            left:0px;
     }
     .canvas-wrap-back{
             width: 600px;
@@ -16,6 +18,8 @@
             position: relative;
             padding: 0;
             box-sizing: content-box;
+            top: 400px;
+            left:0px;
     }
     
     .canvas{
@@ -53,7 +57,6 @@
         <!-- 判定用のキャンバス -->
         <canvas  id="frontJudgeCanvas" width="282" height="400" class="canvas"></canvas>
     </div>
-
     <div class="canvas-wrap-back">
         <canvas  id="backCanvas" width="282" height="400" class="canvas"></canvas>
 
