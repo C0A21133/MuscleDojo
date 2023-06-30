@@ -1,5 +1,5 @@
 .header-box {
-    height: 80px;
+    height: 0px;
 }
 
 header {
@@ -90,11 +90,12 @@ a {
     position: relative;
     z-index: 1;
     background-image: url("../Resources/Images/Background/bg.jpg");
+    background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center center;
     width: 200vh;
-    height: 200vh;
+    height: 100vh;
 }
 
 .BGImage::after {

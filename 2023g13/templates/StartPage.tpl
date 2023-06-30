@@ -16,7 +16,6 @@
     
     <body onload='Draw()'>
     <div class="BGImage">
-        <h1 class="front" style="text-align: center;"><font size="7" color = "#ffa500" >マッスル道場</font></h1>
         <div class="canvas-wrap-front" id="canvasdiv">
             <canvas  id="frontCanvas" width="282" height="400" class="canvas"></canvas>
             <!-- スクリプトで描写するほうが記述量が少ないが、描写処理はまとめて記述したいのでHTMLで記述した -->
@@ -47,7 +46,8 @@
             <canvas  id="backJudgeCanvas" width="282" height="400" class="canvas"></canvas>
         </div>
     </div>
-    
+    <h2>
+
     <script src="../Script/StartPage.js"></script>
     </body>
     

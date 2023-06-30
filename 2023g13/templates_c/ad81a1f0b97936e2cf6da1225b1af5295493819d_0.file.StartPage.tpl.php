@@ -1,30 +1,18 @@
 <?php
-<<<<<<< HEAD
-/* Smarty version 3.1.39, created on 2023-06-30 10:17:38
-=======
-/* Smarty version 3.1.39, created on 2023-06-30 09:24:21
->>>>>>> f6fdf9c298e1fbffbbfb6b7765913287c4b137e1
+/* Smarty version 3.1.39, created on 2023-06-30 10:24:44
   from 'C:\xampp\htdocs\pnw\MuscleDojo\2023g13\templates\StartPage.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-<<<<<<< HEAD
-  'unifunc' => 'content_649e8fa2763405_97584216',
-=======
-  'unifunc' => 'content_649e8325a2acb2_54885619',
->>>>>>> f6fdf9c298e1fbffbbfb6b7765913287c4b137e1
+  'unifunc' => 'content_649e914cdeda19_68964191',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ad81a1f0b97936e2cf6da1225b1af5295493819d' => 
     array (
       0 => 'C:\\xampp\\htdocs\\pnw\\MuscleDojo\\2023g13\\templates\\StartPage.tpl',
-<<<<<<< HEAD
-      1 => 1688113056,
-=======
-      1 => 1688109859,
->>>>>>> f6fdf9c298e1fbffbbfb6b7765913287c4b137e1
+      1 => 1688113484,
       2 => 'file',
     ),
   ),
@@ -32,11 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-<<<<<<< HEAD
-function content_649e8fa2763405_97584216 (Smarty_Internal_Template $_smarty_tpl) {
-=======
-function content_649e8325a2acb2_54885619 (Smarty_Internal_Template $_smarty_tpl) {
->>>>>>> f6fdf9c298e1fbffbbfb6b7765913287c4b137e1
+function content_649e914cdeda19_68964191 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
     <head>
@@ -55,7 +39,6 @@ function content_649e8325a2acb2_54885619 (Smarty_Internal_Template $_smarty_tpl)
     
     <body onload='Draw()'>
     <div class="BGImage">
-        <h1 class="front" style="text-align: center;"><font size="7" color = "#ffa500" >マッスル道場</font></h1>
         <div class="canvas-wrap-front" id="canvasdiv">
             <canvas  id="frontCanvas" width="282" height="400" class="canvas"></canvas>
             <!-- スクリプトで描写するほうが記述量が少ないが、描写処理はまとめて記述したいのでHTMLで記述した -->
