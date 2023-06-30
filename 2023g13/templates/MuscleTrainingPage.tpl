@@ -4,6 +4,8 @@
 </head>
 <body>
     <h1>{$trainingData["training_name"]}</h1>
+    <h3>レベル</h3>
+    {$trainingData["training_level"]}
     <h3>鍛えられる部位</h3>
     {foreach $parts as $part}
         {$part},
@@ -16,7 +18,7 @@
     {$trainingData["training_desc"]}
     <br>
     <h3>注意事項</h3>
-    {$trainingData["training_desc"]}
+    {$trainingData["training_point"]}
     <br>
 
 </body>
