@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2023-06-30 10:24:44
+/* Smarty version 3.1.39, created on 2023-06-30 10:56:08
   from 'C:\xampp\htdocs\pnw\MuscleDojo\2023g13\templates\StartPage.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_649e914cdeda19_68964191',
+  'unifunc' => 'content_649e98a82c5850_11380739',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ad81a1f0b97936e2cf6da1225b1af5295493819d' => 
     array (
       0 => 'C:\\xampp\\htdocs\\pnw\\MuscleDojo\\2023g13\\templates\\StartPage.tpl',
-      1 => 1688113484,
+      1 => 1688115364,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_649e914cdeda19_68964191 (Smarty_Internal_Template $_smarty_tpl) {
+function content_649e98a82c5850_11380739 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
     <head>
@@ -69,7 +69,13 @@ function content_649e914cdeda19_68964191 (Smarty_Internal_Template $_smarty_tpl)
             <canvas  id="backJudgeCanvas" width="282" height="400" class="canvas"></canvas>
         </div>
     </div>
-    
+    <form class="front"  action="../muscle/MuscleEnumerate.php" method="post">
+        <p>目的1<br>
+            <input type="checkbox" name="training" value = "バルクアップをしたい">バルクアップをしたい
+        </p>
+    </form>
+
+
     <?php echo '<script'; ?>
  src="../Script/StartPage.js"><?php echo '</script'; ?>
 >

@@ -46,7 +46,12 @@
             <canvas  id="backJudgeCanvas" width="282" height="400" class="canvas"></canvas>
         </div>
     </div>
-    <h2>
+    <form class="front"  action="../muscle/MuscleEnumerate.php" method="post">
+        <p>目的1<br>
+            <input type="checkbox" name="training" value = "バルクアップをしたい">バルクアップをしたい
+        </p>
+    </form>
+
 
     <script src="../Script/StartPage.js"></script>
     </body>
