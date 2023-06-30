@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>トレーニング情報を追加する。</title>
+        <!--トレーニング情報追加ページ-->
     </head>
     <body>
         <h1>トレーニング情報を追加する。</h1>

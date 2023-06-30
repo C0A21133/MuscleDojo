@@ -41,6 +41,6 @@ $smarty->assign("id",$id);
 $smarty->assign("trainingData",$trainingData);
 $smarty->assign("parts",$parts);
 $smarty->assign("targets",$targets);
-$smarty->display("../templates/DBtrainingEdit.tpl");
+$smarty->display("../templates/MuscleTrainingPage.tpl");
 
 ?>
