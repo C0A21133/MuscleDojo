@@ -1,4 +1,27 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 3.1.39, created on 2023-06-30 10:54:15
+  from 'C:\xampp\htdocs\pnw\MuscleDojo\2023g13\templates\DBproteinAdd.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.39',
+  'unifunc' => 'content_649e983731fa53_57183193',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'e7aa8f8f8bca5e11f568276d5229220e25868eeb' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\pnw\\MuscleDojo\\2023g13\\templates\\DBproteinAdd.tpl',
+      1 => 1688113954,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_649e983731fa53_57183193 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -33,3 +56,5 @@
 
     </body>
 </html>
+<?php }
+}
