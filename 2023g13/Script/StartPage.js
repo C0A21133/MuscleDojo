@@ -2,12 +2,12 @@
 //ここで定義する必要はなくなるが、実力不足のため未実装
 //画像を変更する場合この配列を変更
 frontMuscleArray = [
-	"/FrontMusclePart/Abs.png", "/FrontMusclePart/Calf.png", "/FrontMusclePart/LowerArm.png",
-	"/FrontMusclePart/Nape.png", "/FrontMusclePart/Pectoral.png", "/FrontMusclePart/Shoulder.png",
-	"/FrontMusclePart/Thigh.png", "/FrontMusclePart/UpperArm.png"];
+	"/FrontMusclePart/Abs.png", "/FrontMusclePart/Arm.png", "/FrontMusclePart/Foot.png",
+	"/FrontMusclePart/Pectoral.png", "/FrontMusclePart/Shoulder.png",
+	];
 
 backMuscleArray = [
-	"/BackMusclePart/Ass.png", "/BackMusclePart/Spine.png"
+	"/BackMusclePart/Arm.png", "/BackMusclePart/Back.png", "/BackMusclePart/Foot.png"
 ];
 
 //frontMuscleArray内の要素の数だけImage()をつくり
@@ -136,25 +136,16 @@ function clickOnFrontCanvas(x, y)
 			text = "腹";
 			break;
 		case "1frontCanvas":
-			text = "すね";
+			text = "うで";
 			break;
 		case "2frontCanvas":
-			text = "下腕";
+			text = "あし";
 			break;
 		case "3frontCanvas":
-			text = "首";
+			text = "むね";
 			break;
 		case "4frontCanvas":
-			text = "胸";
-			break;
-		case "5frontCanvas":
-			text = "肩";
-			break;
-		case "6frontCanvas":
-			text = "ふともも";
-			break;
-		case "7frontCanvas":
-			text = "上腕";
+			text = "かた";
 			break;
 		default:
 			text = "無";
@@ -179,10 +170,13 @@ function clickOnBackCanvas(x, y)
 	let text;
 	switch (id) {
 		case "0backCanvas":
-			text = "尻";
+			text = "うで";
 			break;
 		case "1backCanvas":
 			text = "背中";
+			break;
+		case "2backCanvas":
+			text = "あし";
 			break;
 		default:
 			text = "無";
