@@ -1,24 +1,21 @@
 <?php
-require_once 'libDB.php'; // libDB.phpファイルを読み込む
+require_once("../pnwsmarty.php");
 
-// データベースに接続
-$db = new libDB();
+$pnw = new pnwsmarty();
+$smarty = $pnw->getTpl();
+/*
+//データベースへ接続
 $db = new libDB();
 $pdo = $db->getPDO();
 
-$sql = $pdo->prepare("SELECT * from table_training WHERE training_id = :training_id");
+//idと名前を取得
+$sql = $pdo->prepare("SELECT * FROM table_training");
 $sql->execute();
 $result = $sql->fetchAll();
+*/
 
-//if(!$result){
-//echo "ログインに失敗しました．<br>";
-//}
-//foreach($result as $loop){
-//結果を表示
-//echo "ログインに成功しました<br>";
-//}
+$result = "sss";
 
-// データベースからデータを取得するクエリを実行
-$query = "SELECT * FROM table_training"; // table_nameは実際のテーブル名に置き換える
-
+$smarty->assign("datalist", $result);
+$smarty->display('MuscleEnumeratePage.tpl');
 ?>
