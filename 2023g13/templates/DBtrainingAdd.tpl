@@ -6,7 +6,7 @@
     </head>
     <body>
         <h1>トレーニング情報を追加する。</h1>
-        <form action="" method="post">
+        <form action="../muscle/DBtrainingeAddProcess.php" method="post">
 
         トレーニング名
         ：<input type="text" name="name" required>
@@ -34,17 +34,16 @@
         <input type="checkbox" name="part[]" value="脚">脚<br>
 
         目的：<font color="#ff0000">*必須</font><br>
-        <input type="checkbox" name="part[]" value="バルクアップをしたい">バルクアップをしたい
-        <input type="checkbox" name="part[]" value="細マッチョを目指す">細マッチョを目指す
-        <input type="checkbox" name="part[]" value="ダイエットをしたい">ダイエットをしたい<br>
+        <input type="checkbox" name="target[]" value="バルクアップをしたい">バルクアップをしたい
+        <input type="checkbox" name="target[]" value="細マッチョを目指す">細マッチョを目指す
+        <input type="checkbox" name="target[]" value="ダイエットをしたい">ダイエットをしたい<br>
 
         解説：<font color="#ff0000">*必須</font><br>
-        <textarea name="desc" cols="100" rows="30"></textarea><br>
+        <textarea name="desc" cols="100" rows="30" required></textarea><br>
 
-        解説：<font color="#ff0000">*必須</font><br>
-        <textarea name="desc" cols="100" rows="30"></textarea><br>
+        注意事項：<br>
+        <textarea name="point" cols="100" rows="30"></textarea><br>
         <input type="submit" value="追加">
-
 
         </form>
     </body>
