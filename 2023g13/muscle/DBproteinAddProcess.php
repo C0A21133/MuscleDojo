@@ -7,12 +7,14 @@ $pnw = new pnwsmarty();
 $smarty = $pnw->getTpl();
 
 //POSTされたデータを変数へ
+$maker=$_POST["maker"];
 $name=$_POST["name"];
-$level=(int)$_POST["level"];
-$parts=$_POST["part"];
-$targets=$_POST["target"];
+$price=(int)$_POST["price"];
+$weight=(int)$_POST["weight"];
+foreach($_POST["target"] as $content ){
+    $target=$content;
+}
 $desc=nl2br($_POST["desc"]);
-$point=nl2br($_POST["point"]);
 
 //データベースへ接続
 $db=new libDB();
@@ -24,8 +26,8 @@ $sql->bindValue(":maker",$maker,PDO::PARAM_STR);
 $sql->bindValue(":name",$name,PDO::PARAM_INT);
 $sql->bindValue(":weight",$weight,PDO::PARAM_STR);
 $sql->bindValue(":price",$price,PDO::PARAM_STR);
-$spl->bindValue(":target",$target,PDO::PARAM_STR);
-$spl->bindValue(":desc",$desc,PDO::PARAM_STR);
+$sql->bindValue(":target",$target,PDO::PARAM_STR);
+$sql->bindValue(":desc",$desc,PDO::PARAM_STR);
 $sql->execute();
 
 //変数確認用
