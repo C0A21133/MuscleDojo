@@ -51,9 +51,6 @@
         <canvas  id="2frontCanvas" width="282" height="400" class="canvas"></canvas>
         <canvas  id="3frontCanvas" width="282" height="400" class="canvas"></canvas>
         <canvas  id="4frontCanvas" width="282" height="400" class="canvas"></canvas>
-        <canvas  id="5frontCanvas" width="282" height="400" class="canvas"></canvas>
-        <canvas  id="6frontCanvas" width="282" height="400" class="canvas"></canvas>
-        <canvas  id="7frontCanvas" width="282" height="400" class="canvas"></canvas>
         <!-- 判定用のキャンバス -->
         <canvas  id="frontJudgeCanvas" width="282" height="400" class="canvas"></canvas>
     </div>
@@ -62,6 +59,7 @@
 
         <canvas  id="0backCanvas" width="282" height="400" class="canvas"></canvas>
         <canvas  id="1backCanvas" width="282" height="400" class="canvas"></canvas>
+        <canvas  id="2backCanvas" width="282" height="400" class="canvas"></canvas>
 
         <canvas  id="backJudgeCanvas" width="282" height="400" class="canvas"></canvas>
     </div>
