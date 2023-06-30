@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>DB管理ページ</title>
+        <!--初期ページ-->
     </head>
     <body>
         <h1>DB管理ページ</h1>

@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>{$contents}に成功しました</title>
+        <!--成功ページ contents:目的 path:1つ前のページのパス-->
     </head>
     <body>
         <h1>{$contents}に成功しました</h1>

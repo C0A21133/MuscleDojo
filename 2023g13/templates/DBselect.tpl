@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>{$operation}</title>
+        <!--トレーニングとプロテインの選択に利用-->
     </head>
     <body>
         <h1>{$operation}</h1>
