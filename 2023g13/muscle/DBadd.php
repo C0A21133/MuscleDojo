@@ -6,6 +6,6 @@ $smarty = $pnw->getTpl();
 $smarty->assign("operation","データベースに情報を追加する。");
 $smarty->assign("ope","情報を追加する。");
 $smarty->assign("trainingPath","../muscle/DBtrainingAdd.php");
-$smarty->assign("proteinPath","");
+$smarty->assign("proteinPath","../muscle/DBproteinAdd.php");
 $smarty->display("DBselect.tpl");
 ?>
