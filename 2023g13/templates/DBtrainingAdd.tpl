@@ -30,70 +30,66 @@
         <font color="#ff0000">*必須</font><br>
 
         部位：<font color="#ff0000">*必須</font><br>
-        <input type="checkbox" name="part" value="肩">肩
-        <input type="checkbox" name="part" value="腕">腕
-        <input type="checkbox" name="part" value="胸">胸
-        <input type="checkbox" name="part" value="体幹">体幹
-        <input type="checkbox" name="part" value="背中">背中
-        <input type="checkbox" name="part" value="脚">脚<br>
+        {if isset($smarty.cookies.part1)}
+            <input type="checkbox" name="part[]" value="肩" id="part" checked>肩
+        {else}
+            <input type="checkbox" name="part[]" value="肩" id="part">肩
+        {/if}
+        {if isset($smarty.cookies.part2)}
+            <input type="checkbox" name="part[]" value="腕" id="part" checked>腕
+        {else}
+            <input type="checkbox" name="part[]" value="腕" id="part">腕
+        {/if}
+        {if isset($smarty.cookies.part3)}
+            <input type="checkbox" name="part[]" value="胸" id="part" checked>胸
+        {else}
+            <input type="checkbox" name="part[]" value="胸" id="part">胸
+        {/if}
+        {if isset($smarty.cookies.part4)}
+            <input type="checkbox" name="part[]" value="体幹" id="part" checked>体幹
+        {else}
+            <input type="checkbox" name="part[]" value="体幹" id="part">体幹
+        {/if}
+        {if isset($smarty.cookies.part5)}
+            <input type="checkbox" name="part[]" value="背中" id="part" checked>背中
+        {else}
+            <input type="checkbox" name="part[]" value="背中" id="part">背中
+        {/if}
+        {if isset($smarty.cookies.part6)}
+            <input type="checkbox" name="part[]" value="脚" id="part" checked>脚
+        {else}
+            <input type="checkbox" name="part[]" value="脚" id="part">脚
+        {/if}
+        <br>
 
         目的：<font color="#ff0000">*必須</font><br>
-        <input type="checkbox" name="target[]" value="バルクアップをしたい">バルクアップをしたい
-        <input type="checkbox" name="target[]" value="細マッチョを目指す">細マッチョを目指す
-        <input type="checkbox" name="target[]" value="ダイエットをしたい">ダイエットをしたい<br>
+        {if isset($smarty.cookies.target1)}
+            <input type="checkbox" name="target[]" value="バルクアップをしたい" id="target" checked>バルクアップをしたい
+        {else}
+            <input type="checkbox" name="target[]" value="バルクアップをしたい" id="target">バルクアップをしたい
+        {/if}
+        {if isset($smarty.cookies.target2)}
+            <input type="checkbox" name="target[]" value="細マッチョを目指す" id="target" checked>細マッチョを目指す
+        {else}
+            <input type="checkbox" name="target[]" value="細マッチョを目指す" id="target">細マッチョを目指す
+        {/if}
+        {if isset($smarty.cookies.target3)}
+            <input type="checkbox" name="target[]" value="ダイエットをしたい" id="target" checked>ダイエットをしたい
+        {else}
+            <input type="checkbox" name="target[]" value="ダイエットをしたい" id="target">ダイエットをしたい
+        {/if}
+        <br>
 
         解説：<font color="#ff0000">*必須</font><br>
-        <textarea name="desc" cols="100" rows="30" required></textarea><br>
+    <textarea name="desc" cols="100" rows="30" id="desc" required>{if isset($smarty.cookies.desc)}{str_replace("\\n","&#13;",$smarty.cookies.desc)}{/if}</textarea><br>
 
         注意事項：<br>
-        <textarea name="point" cols="100" rows="30"></textarea><br>
+        <textarea name="point" cols="100" rows="30" id="point">{if isset($smarty.cookies.point)}{str_replace("\\n","&#13;",$smarty.cookies.point)}{/if}</textarea><br>
         <input type="submit" value="追加">
 
         </form>
         
-        <!-- 入力情報保持機能(beta版)
-        {literal}
-            <script>
-                
-                console.log(document.cookie);
-                //cookieを取得
-                const cookie = document.cookie;
-
-                //イベント処理
-                window.addEventListener('DOMContentLoaded', function(){
-
-                    // テキストエリアのHTML要素を取得
-                    let name = document.getElementById("name");
-                    let level = document.getElementById("level");
-                    let parts = document.querySelectorAll("input[name=part]");
-
-
-                    // トレーニング名を入力時に実行
-                    name.addEventListener("input",function(){
-                        //cookieに保存
-                        document.cookie = 'name='+this.value;
-                    });
-
-                    //レベル選択時に実行
-                    level.addEventListener("input",function(){
-                        //cookieに保存
-                        document.cookie = "level="+this.value;
-                    });
-
-                    //部位選択時に実行
-                    for(var i in parts){
-                        let part = parts[i];
-                        let num = i;
-                        part.addEventListener("input",function(){
-                            document.cookie = "part"+num+"=1";
-                            console.log(this.value);
-                            console.log(document.cookie);
-                        })
-                    }
-                });
-            </script>
-        {/literal}
-
-        -->
+        <!-- 下書きをcookieに保存するscript -->
+        <script src="../Script/DBtrainingAdd.js"></script>
     </body>
 </html>
