@@ -11,9 +11,7 @@ $maker=$_POST["maker"];
 $name=$_POST["name"];
 $price=(int)$_POST["price"];
 $weight=(int)$_POST["weight"];
-foreach($_POST["target"] as $content ){
-    $target=$content;
-}
+$target=$_POST["target"];
 $desc=nl2br($_POST["desc"]);
 
 //データベースへ接続
@@ -23,7 +21,7 @@ $pdo=$db->getPDO();
 //table_proteinへ追加
 $sql=$pdo->prepare("INSERT INTO table_protein (protein_maker,protein_name,protein_weight,protein_price,protein_target,protein_desc) VALUES (:maker,:name,:weight,:price,:target,:desc)");
 $sql->bindValue(":maker",$maker,PDO::PARAM_STR);
-$sql->bindValue(":name",$name,PDO::PARAM_INT);
+$sql->bindValue(":name",$name,PDO::PARAM_STR);
 $sql->bindValue(":weight",$weight,PDO::PARAM_STR);
 $sql->bindValue(":price",$price,PDO::PARAM_STR);
 $sql->bindValue(":target",$target,PDO::PARAM_STR);

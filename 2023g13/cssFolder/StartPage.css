@@ -117,6 +117,14 @@ a {
 }
 .front level{
     z-index: 3;
+
     width: 400px;
     white-space: nowrap;
+}
+
+
+.front enumerateTable {
+    margin-left:200px;
+    margin-top:600px;
+
 }

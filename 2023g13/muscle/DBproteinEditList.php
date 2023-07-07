@@ -2,6 +2,7 @@
 require_once("../pnwsmarty.php");
 require("../libDB.php");
 
+//smartyを有効化
 $pnw = new pnwsmarty();
 $smarty = $pnw->getTpl();
 
@@ -14,14 +15,8 @@ $sql = $pdo->prepare("SELECT * FROM table_protein");
 $sql->execute();
 $result = $sql->fetchAll();
 
-$column = 'SHOW COLUMNS FROM table_protein';
-$stmh = $pdo->prepare($column);
-$stmh -> execute();
-while($row = $stmh->fetch(PDO::FETCH_ASSOC)){
-$rows[]=$row;
-}
-
-$smarty->assign("dataList", $result);
-$smarty->assign("Column", $rows);
-$smarty->display('ProteinEnumeratePage.tpl');
+//表示
+$smarty->assign("dataList",$result);
+$smarty->assign("beforePath","../muscle/DBedit.php");
+$smarty->display("DBproteinEditList.tpl");
 ?>
