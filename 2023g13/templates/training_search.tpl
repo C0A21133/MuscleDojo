@@ -7,6 +7,8 @@
     </head>
     <body>
         <h1>トレーニングを検索する。</h1>
+        <p>レベルを入力</p>
+        <input type="search">
         
     </body>
 </html>
