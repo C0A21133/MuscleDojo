@@ -16,7 +16,7 @@
     
     <body onload='Draw()'>
     <div class="BGImage">
-        <div class="canvas-wrap-front" id="canvasdiv">
+        <div class="canvas-wrap-front" id="canvasdiv">@
             <canvas  id="frontCanvas" width="282" height="400" class="canvas"></canvas>
             <!-- スクリプトで描写するほうが記述量が少ないが、描写処理はまとめて記述したいのでHTMLで記述した -->
 
