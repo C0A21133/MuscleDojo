@@ -4,7 +4,7 @@
         <meta charset="utf-8">
     </head>
     <body>
-    table>
+    <table border="1">
     <tr>
         <th>id</th>
         <th>name</th>
