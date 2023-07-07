@@ -1,6 +1,30 @@
 <?php
 require("../libDB.php");
 
+//cookieに保存された下書きを削除
+if(isset($_COOKIE["name"])){
+    setcookie("name","",time()-30);
+}
+if(isset($_COOKIE["level"])){
+    setcookie("level","",time());
+}
+for($i=1; $i<7; $i++){
+    if(isset($_COOKIE["part".$i])){
+        setcookie("part".$i,"",time()-30);
+    }
+}
+for($i=1; $i<4; $i++){
+    if(isset($_COOKIE["target".$i])){
+        setcookie("target".$i,"",time()-30);
+    }
+}
+if(isset($_COOKIE["desc"])){
+    setcookie("desc","",time()-30);
+}
+if(isset($_COOKIE["point"])){
+    setcookie("point","",time()-30);
+}
+
 //smartyを有効化
 require_once("../pnwsmarty.php");
 $pnw = new pnwsmarty();
@@ -72,6 +96,7 @@ echo $point;
 $smarty->assign("contents","データの追加");
 $smarty->assign("path","../muscle/DBtrainingAdd.php");
 $smarty->display("../templates/DBsucces.tpl");
+
 ?>
 
 
