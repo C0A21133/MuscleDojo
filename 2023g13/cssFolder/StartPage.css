@@ -1,3 +1,4 @@
+
 .header-box {
     height: 0px;
 }
@@ -63,7 +64,7 @@ a {
 }
 
 .canvas-wrap-back {
-    width: 600px;
+    width: 400px;
     max-width: 100%;
     position: relative;
     padding: 0;
@@ -110,7 +111,12 @@ a {
     opacity: 0.5;
 }
 
-.front {
-    position: relative;
+.front purpose{
+    width: auto;
+
+}
+.front level{
     z-index: 3;
+    width: 400px;
+    white-space: nowrap;
 }
