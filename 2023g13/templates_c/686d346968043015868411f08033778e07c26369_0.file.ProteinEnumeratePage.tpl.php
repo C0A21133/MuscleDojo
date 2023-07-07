@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2023-07-07 10:16:42
-  from 'C:\xampp\htdocs\pnw\MuscleDojo\2023g13\templates\MuscleEnumeratePage.tpl' */
+/* Smarty version 3.1.39, created on 2023-07-07 10:16:44
+  from 'C:\xampp\htdocs\pnw\MuscleDojo\2023g13\templates\ProteinEnumeratePage.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_64a7c9eab42c11_46885251',
+  'unifunc' => 'content_64a7c9ec0c0068_87606514',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '197d62765f4f8494d3bbdb86f1e32c8fb55dd858' => 
+    '686d346968043015868411f08033778e07c26369' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\pnw\\MuscleDojo\\2023g13\\templates\\MuscleEnumeratePage.tpl',
-      1 => 1688717516,
+      0 => 'C:\\xampp\\htdocs\\pnw\\MuscleDojo\\2023g13\\templates\\ProteinEnumeratePage.tpl',
+      1 => 1688717497,
       2 => 'file',
     ),
   ),
@@ -20,21 +20,20 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_64a7c9eab42c11_46885251 (Smarty_Internal_Template $_smarty_tpl) {
+function content_64a7c9ec0c0068_87606514 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
     </head>
-    
     <body>
-    <table align="center" border="1" class="front enumerateTable">
+    <table>
     <tr>
         <th>id</th>
-        <th>level</th>
         <th>name</th>
-        <th>setumi</th>
-        <th>point</th>
+        <th>price</th>
+        <th>target</th>
+        <th>desc</th>
     </tr>
         <?php ob_start();
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['dataList']->value, 'data');
