@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2023-06-30 07:27:03
-  from 'C:\xampp\htdocs\pnw\2023g13\MuscleDojo\2023g13\templates\DBtrainingEditList.tpl' */
+/* Smarty version 3.1.39, created on 2023-07-07 07:53:11
+  from 'C:\xampp\htdocs\pnw\MuscleDojo\2023g13\templates\DBtrainingEditList.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_649e67a742cdf9_85046471',
+  'unifunc' => 'content_64a7a8472cb664_02089137',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '84ec70fb5ab94128384f2ffad97ec277b5b78b6e' => 
+    '18317891570ed44cabdf164643a2ea08244bfc1e' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\pnw\\2023g13\\MuscleDojo\\2023g13\\templates\\DBtrainingEditList.tpl',
-      1 => 1688013766,
+      0 => 'C:\\xampp\\htdocs\\pnw\\MuscleDojo\\2023g13\\templates\\DBtrainingEditList.tpl',
+      1 => 1688109855,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_649e67a742cdf9_85046471 (Smarty_Internal_Template $_smarty_tpl) {
+function content_64a7a8472cb664_02089137 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
     <head>
