@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2023-07-07 08:49:43
+/* Smarty version 3.1.39, created on 2023-07-07 09:26:27
   from 'C:\xampp\htdocs\pnw\MuscleDojo\2023g13\templates\ProteinEnumeratePage.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_64a7b5877457c2_82264370',
+  'unifunc' => 'content_64a7be23cd5017_09749973',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '686d346968043015868411f08033778e07c26369' => 
     array (
       0 => 'C:\\xampp\\htdocs\\pnw\\MuscleDojo\\2023g13\\templates\\ProteinEnumeratePage.tpl',
-      1 => 1688712575,
+      1 => 1688714785,
       2 => 'file',
     ),
   ),
@@ -20,14 +20,25 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_64a7b5877457c2_82264370 (Smarty_Internal_Template $_smarty_tpl) {
+function content_64a7be23cd5017_09749973 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="../cssFolder/StartPage.css">
     </head>
+    <div class="BGImage">
     <body>
-    <table border="1">
+    <table border="1" align="center" class="front">
+    <div class="header-box"></div>
+    <header>
+        <h1 class = "logo">まっする</h1>
+        <nav class="pc-menu">
+            <ul>
+                
+            </ul>
+        </nav>
+    </header>
     <tr>
         <th>id</th>
         <th>name</th>
@@ -72,5 +83,6 @@ echo $_prefixVariable5;?>
 
     </table>
     </body>
+    </div>
 </html><?php }
 }

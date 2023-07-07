@@ -2,10 +2,20 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="../cssFolder/StartPage.css">
     </head>
+    <div class="header-box"></div>
+    <header>
+        <h1 class = "logo">まっする</h1>
+        <nav class="pc-menu">
+            <ul>
+                
+            </ul>
+        </nav>
+    </header>
+    <div class="BGImage">
     <body>
-    
-    <table border="1">
+    <table align="center" border="1" class="front enumerateTable">
     <tr>
         <th>id</th>
         <th>level</th>
@@ -22,4 +32,5 @@
         {{/foreach}}
     </table>
     </body>
+    </div>
 </html>
