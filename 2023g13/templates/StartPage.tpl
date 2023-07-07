@@ -45,15 +45,46 @@
 
             <canvas  id="backJudgeCanvas" width="282" height="400" class="canvas"></canvas>
         </div>
+          <form class="front purpose" action="../muscle/MuscleEnumerate.php" method="post">
+              <p style="margin-left: 1500px; margin-top:100px;">
+                  <font size="8">難易度</font><br>
+              </p>
+                <ul style="margin-left: 1200px; margin-top:100px;">
+                  <input type="checkbox" name="training" value="level1">
+                  <li><font size="5">level1</font></li>
+                  <input type="checkbox" name="training" value="level2">
+                  <li>level2</li>
+                  <input type="checkbox" name="training" value="level3">
+                  <li>level3</li>
+                  <input type="checkbox" name="training" value="level2">
+                  <li>level4</li>
+                  <input type="checkbox" name="training" value="level3">
+                  <li>level5</li>
+                  <input type="checkbox" name="training" value="level2">
+                  <li>level6</li>
+                  <input type="checkbox" name="training" value="level3">
+                  <li>level7</li>
+                  <input type="checkbox" name="training" value="level2">
+                  <li>level8</li>
+                  <input type="checkbox" name="training" value="level3">
+                  <li>level9</li>
+              </ul>
+          </form>
+          <form class="front level " action="../muscle/MuscleEnumerate.php" method="post">
+              <p>目的<br>
+              <p>目的1<br>
+                  <input type="checkbox" name="training" value="バルクアップをしたい">バルクアップをしたい
+              </p>
+              <p>目的2<br>
+                  <input type="checkbox" name="training" value="細マッチョを目指す">細マッチョを目指す
+              </p>
+              <p>目的3<br>
+                  <input type="checkbox" name="training" value="ダイエットをしたい">ダイエットをしたい
+              </p>
+</form>
     </div>
-    <form class="front"  action="../muscle/MuscleEnumerate.php" method="post">
-        <p>目的1<br>
-            <input type="checkbox" name="training" value = "バルクアップをしたい">バルクアップをしたい
-        </p>
-    </form>
-
 
     <script src="../Script/StartPage.js"></script>
-    </body>
+</body>
     
 </html>

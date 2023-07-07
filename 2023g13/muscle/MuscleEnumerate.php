@@ -4,7 +4,8 @@ require("../libDB.php");
 
 $pnw = new pnwsmarty();
 $smarty = $pnw->getTpl();
-
+/*
+//データベースへ接続
 $db = new libDB();
 $pdo = $db->getPDO();
 
@@ -16,7 +17,8 @@ $sql->bindValue(":level",$level,PDO::PARAM_INT);
 $sql->execute();
 $result = $sql->fetchAll();
 
-/*
+$result = "sss";
+
 $smarty->assign("datalist", $result);
 $smarty->display('MuscleEnumeratePage.tpl');
 */

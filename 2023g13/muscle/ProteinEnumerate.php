@@ -1,9 +1,10 @@
 <?php
 require_once("../pnwsmarty.php");
+require("../libDB.php");
 
 $pnw = new pnwsmarty();
 $smarty = $pnw->getTpl();
-/*
+
 //データベースへ接続
 $db = new libDB();
 $pdo = $db->getPDO();
@@ -12,10 +13,15 @@ $pdo = $db->getPDO();
 $sql = $pdo->prepare("SELECT * FROM table_protein");
 $sql->execute();
 $result = $sql->fetchAll();
-*/
 
-$result = "sss";
+$column = 'SHOW COLUMNS FROM table_protein';
+$stmh = $pdo->prepare($column);
+$stmh -> execute();
+while($row = $stmh->fetch(PDO::FETCH_ASSOC)){
+$rows[]=$row;
+}
 
-$smarty->assign("datalist", $result);
+$smarty->assign("dataList", $result);
+$smarty->assign("Column", $rows);
 $smarty->display('ProteinEnumeratePage.tpl');
 ?>
