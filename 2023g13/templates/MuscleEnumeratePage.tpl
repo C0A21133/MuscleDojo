@@ -11,6 +11,7 @@
         <th>level</th>
         <th>name</th>
         <th>setumi</th>
+        <th>point</th>
     </tr>
         {{foreach $dataList as $data}}
             <tr>
