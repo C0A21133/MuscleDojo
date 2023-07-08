@@ -1,0 +1,60 @@
+*{
+    margin: 0; padding: 0;
+}
+
+.bg_img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-image: url("../Resources/Images/Background/bg.jpg");
+}
+.bg_opacity{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+.canvases{
+    font-weight: bold;
+    border-right: black solid 3px;
+    width: fit-content;
+    display: inline-block;
+}
+
+.canvases h3{
+    width: fit-content;
+}
+
+.canvas-wrap-front {
+    width: 282px;
+    height: 400px;
+    padding-top: 10px;
+    position: relative;
+    display: inline-block;
+    box-sizing: content-box;
+}
+
+.canvas-wrap-back {
+    width: 282px;
+    height: 400px;
+    padding-top: 10px;
+    display: inline-block;
+    position: relative;
+    box-sizing: content-box;
+}
+
+.canvas {
+    position: absolute;
+}
+
+.form{
+    display: inline-block;
+    vertical-align: top;
+}
+.training{
+    padding-bottom: 5px;
+    border-bottom: black solid 3px;
+}
