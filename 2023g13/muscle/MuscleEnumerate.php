@@ -30,15 +30,21 @@ if(isset($_POST["tr_name"]) && $_POST["tr_name"] != ""){
 
 if(isset($_POST["part"])){
     $part = $_POST["part"];
+    $command = " AND ( ";
     foreach($part as $data){
-        $training_command .= " AND part='" . $data ."'";
+        $command .= "  part='" . $data ."' OR";
     }
+    $command = substr($command, 0, -2);
+    $training_command .= $command . " )";
 }
 if(isset($_POST["target"])){
     $target = $_POST["target"];
+    $command = " AND ( ";
     foreach($target as $data){
-        $training_command .= " AND target='" . $data ."'";
+        $command .= "  target='" . $data ."' OR";
     }
+    $command = substr($command, 0, -2);
+    $training_command .= $command . ")";
 }
 
 
