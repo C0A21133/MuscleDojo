@@ -67,7 +67,7 @@ $smarty->assign("Column", $rows);
 $smarty->assign("datalist", $training_result);
 $smarty->display('MuscleEnumeratePage.tpl');
 
-foreach($training_result as $data){
-    echo "<a href='MuscleTrainingPage.php/?id=".$data["training_id"]."'>".$data["training_name"]."</a>"."<br>";
-}
+//foreach($training_result as $data){
+//    echo "<a href='MuscleTrainingPage.php/?id=".$data["training_id"]."'>".$data["training_name"]."</a>"."<br>";
+//}
 ?>
