@@ -55,7 +55,7 @@
                         </div>
                     </div>
                     <div class="form">
-                        <form action="" class="training">
+                        <form action="../muscle/MuscleEnumerate.php" class="training" method="post">
                             <h3>フォームからトレーニング方法を検索する</h3>
                             トレーニング名:<input type="text" name="tr_name" ><br>
                             レベル:
@@ -77,16 +77,16 @@
                             <input type="checkbox" name="target[]" value="ダイエットをしたい">ダイエットをしたい<br>
                             <input type="submit" value="検索">
                         </form>
-                        <form action="" class="protein">
+                        <form action="../muscle/ProteinEnumerate.php" class="protein" method="post">
                             <h3>フォームからトレーニング方法を検索する</h3>
                             メーカー:<input type="text" name="maker"><br>
                             プロテイン名:<input type="text" name="name"><br>
                             値段:<input type="int" name="price"><br>
                             グラム数:<input type="int" name="weight"><br>
                             目的:
-                            <input type="radio" name="target" value="バルクアップをしたい">バルクアップをしたい
-                            <input type="radio" name="target" value="細マッチョを目指す">細マッチョを目指す
-                            <input type="radio" name="target" value="ダイエットをしたい">ダイエットをしたい<br>
+                            <input type="radio" name="target[]" value="バルクアップをしたい">バルクアップをしたい
+                            <input type="radio" name="target[]" value="細マッチョを目指す">細マッチョを目指す
+                            <input type="radio" name="target[]" value="ダイエットをしたい">ダイエットをしたい<br>
                             <input type="submit" value="検索">
                         </form>
                     </div>

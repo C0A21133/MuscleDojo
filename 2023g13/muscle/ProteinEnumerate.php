@@ -9,8 +9,35 @@ $smarty = $pnw->getTpl();
 $db = new libDB();
 $pdo = $db->getPDO();
 
+$protein_command = "SELECT * FROM table_protein WHERE 1=1";
+
+
+
+if(isset($_POST["maker"]) && $_POST["maker"]!=""){
+    $maker = (string)$_POST["maker"];
+    $protein_command .= " AND protein_maker='" . $maker ."'";
+}
+if(isset($_POST["name"]) && $_POST["name"]!=""){
+    $name = (string)$_POST["name"];
+    $protein_command .= " AND protein_name='" . $name ."'";
+}
+if(isset($_POST["price"]) && $_POST["price"]!=""){
+    $price = (int)$_POST["price"];
+    $protein_command .= " AND protein_price=" . $price;
+}
+if(isset($_POST["weight"])&& $_POST["weight"]!=""){
+    $weight = (int)$_POST["weight"];
+    $protein_command .= " AND protein_wight=" . $weight;
+}
+if(isset($_POST["target"])){
+    $target = $_POST["target"];
+    foreach($target as $data){
+        $protein_command .= " AND protein_target='" . $data ."'";
+    }
+}
+
 //idと名前を取得
-$sql = $pdo->prepare("SELECT * FROM table_protein");
+$sql = $pdo->prepare($protein_command);
 $sql->execute();
 $result = $sql->fetchAll();
 
