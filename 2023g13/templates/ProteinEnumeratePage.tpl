@@ -8,7 +8,8 @@
     <body onload="Draw()">
         <div class="bg_img">
         <div class="bg_opacity">    
-    <table align="center" border="5">
+
+<table style="font-size : 30px;" align="center" border="5">
         <tr>
             {{foreach $Column as $column}}
                 {if $column['Field'] != "protein_id"}
