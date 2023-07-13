@@ -2,8 +2,11 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="../cssFolder/TestPage.css">
     </head>
-    <body>
+    <body onload="Draw()">
+        <div class="bg_img">
+        <div class="bg_opacity">    
     <table align="center" border="1">
         <tr>
             {{foreach $Column as $column}}
