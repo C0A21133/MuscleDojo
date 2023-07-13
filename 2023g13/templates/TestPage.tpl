@@ -65,12 +65,12 @@
                                 {/for}
                             </select><br>
                             部位：
-                            <input type="checkbox" name="part[]" value="肩">肩
-                            <input type="checkbox" name="part[]" value="腕">腕
-                            <input type="checkbox" name="part[]" value="胸">胸
-                            <input type="checkbox" name="part[]" value="体幹">体幹
-                            <input type="checkbox" name="part[]" value="背中">背中
-                            <input type="checkbox" name="part[]" value="脚">脚<br>
+                            <input type="checkbox" name="part[]" value="肩" id="shoulder">肩
+                            <input type="checkbox" name="part[]" value="腕" id="arm">腕
+                            <input type="checkbox" name="part[]" value="胸" id="chest">胸
+                            <input type="checkbox" name="part[]" value="体幹" id="trunk">体幹
+                            <input type="checkbox" name="part[]" value="背中" id="back">背中
+                            <input type="checkbox" name="part[]" value="脚" id="foot">脚<br>
                             目的：
                             <input type="checkbox" name="target[]" value="バルクアップをしたい">バルクアップをしたい
                             <input type="checkbox" name="target[]" value="細マッチョを目指す">細マッチョを目指す
