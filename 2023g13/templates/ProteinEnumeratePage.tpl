@@ -11,19 +11,19 @@
 
 <table style="font-size : 30px;" align="center" border="5">
         <tr>
-            {{foreach $Column as $column}}
-                {if $column['Field'] != "protein_id"}
-                    <th>{{$column['Field']}}</th>
-                {/if}
-            {{/foreach}}
+            <th>名前</th>
+            <th>値段</th>
+            <th>目的</th>
+            <th>メーカー</th>
+            <th>重さ</th>
         </tr>
         {{foreach $dataList as $data}}
             <tr>
-            {{foreach $Column as $column}}
-                {if $column['Field'] != "protein_id"}
-                <td>{$data[{$column['Field']}]}</td>
-                {/if}
-            {{/foreach}}
+            <td><a href="../muscle/ProteinPage.php/?id={$data["protein_id"]}">{{$data["protein_name"]}}</a></td>
+            <td>{$data["protein_price"]}</td>
+            <td>{$data["protein_target"]}</td>
+            <td>{$data["protein_maker"]}</td>
+            <td>{$data["protein_weight"]}</td>
             </tr>
         {{/foreach}}
     </table>

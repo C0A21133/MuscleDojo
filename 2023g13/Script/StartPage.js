@@ -133,26 +133,32 @@ function clickOnFrontCanvas(x, y)
 	let text;
 	switch (id) {
 		case "0frontCanvas":
-			text = "腹";
+			text = "trunk";
 			break;
 		case "1frontCanvas":
-			text = "うで";
+			text = "arm";
 			break;
 		case "2frontCanvas":
-			text = "あし";
+			text = "foot";
 			break;
 		case "3frontCanvas":
-			text = "むね";
+			text = "chest";
 			break;
 		case "4frontCanvas":
-			text = "かた";
+			text = "shoulder";
 			break;
 		default:
-			text = "無";
+			text = "";
 			break;
 		
 	}
-	alert(text+"を選択した");
+	if(text != ""){
+		let check = document.getElementById(text);
+		if(check.checked == true)
+			check.checked = false;
+		else
+			check.checked = true;
+	}
 }
 
 //キャンバス上でマウスが動いたときの処理
@@ -170,19 +176,26 @@ function clickOnBackCanvas(x, y)
 	let text;
 	switch (id) {
 		case "0backCanvas":
-			text = "うで";
+			text = "arm";
 			break;
 		case "1backCanvas":
-			text = "背中";
+			text = "trunk";
 			break;
 		case "2backCanvas":
-			text = "あし";
+			text = "foot";
 			break;
 		default:
-			text = "無";
+			text = "";
 			break;
 	}
-	alert(text+"を選択した");
+	if(text != ""){
+		let check = document.getElementById(text);
+		if(check.checked == true)
+			check.checked = false;
+		else
+			check.checked = true;
+	}
+	
 }
 
 function moveOnBackCanvas(x, y)
