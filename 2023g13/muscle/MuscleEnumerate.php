@@ -14,7 +14,7 @@ $search_command = "SELECT * FROM table_training
     INNER JOIN table_part ON table_training.training_id = table_part.training_id 
     INNER JOIN table_target ON table_training.training_id = table_target.training_id 
     INNER JOIN table_protein ON table_target.target = table_protein.protein_target 
-    WHERE ";
+    WHERE  1=1 ";
 
 //["id", "name", "level", ["part"], ["target"]]
 $result_list = [];
@@ -24,7 +24,7 @@ $id_list = [];
 //検索するためのsql文作成
 if(isset($_POST["tr_level"])){
     $level = (int)$_POST["tr_level"];
-    $search_command .= "training_level=" . $level;
+    $search_command .= " AND training_level=" . $level;
 }
 
 if(isset($_POST["tr_name"]) && $_POST["tr_name"] != ""){

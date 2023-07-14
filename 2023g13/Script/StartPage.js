@@ -133,19 +133,19 @@ function clickOnFrontCanvas(x, y)
 	let text;
 	switch (id) {
 		case "0frontCanvas":
-			text = "trunk";
+			text = "体幹";
 			break;
 		case "1frontCanvas":
-			text = "arm";
+			text = "腕";
 			break;
 		case "2frontCanvas":
-			text = "foot";
+			text = "脚";
 			break;
 		case "3frontCanvas":
-			text = "chest";
+			text = "胸";
 			break;
 		case "4frontCanvas":
-			text = "shoulder";
+			text = "肩";
 			break;
 		default:
 			text = "";
@@ -153,11 +153,17 @@ function clickOnFrontCanvas(x, y)
 		
 	}
 	if(text != ""){
-		let check = document.getElementById(text);
-		if(check.checked == true)
-			check.checked = false;
-		else
-			check.checked = true;
+		var form = document.createElement('form');
+		form.action = "../muscle/MuscleEnumerate.php";
+		form.method = "POST";
+		document.body.append(form);
+		form.addEventListener('formdata', (e) => {
+			var fd = e.formData;
+			
+			// データをセット
+			fd.set('part[]', text);
+		});
+		form.submit();
 	}
 }
 
@@ -169,6 +175,7 @@ function moveOnFrontCanvas(x, y)
 	//以下に画像上にマウスが存在する時の処理を記述
 }
 
+
 function clickOnBackCanvas(x, y)
 {
 	let id = judgeBackPart(x, y);
@@ -176,24 +183,30 @@ function clickOnBackCanvas(x, y)
 	let text;
 	switch (id) {
 		case "0backCanvas":
-			text = "arm";
+			text = "腕";
 			break;
 		case "1backCanvas":
-			text = "trunk";
+			text = "背中";
 			break;
 		case "2backCanvas":
-			text = "foot";
+			text = "脚";
 			break;
 		default:
 			text = "";
 			break;
 	}
 	if(text != ""){
-		let check = document.getElementById(text);
-		if(check.checked == true)
-			check.checked = false;
-		else
-			check.checked = true;
+		var form = document.createElement('form');
+		form.action = "../muscle/MuscleEnumerate.php";
+		form.method = "POST";
+		document.body.append(form);
+		form.addEventListener('formdata', (e) => {
+			var fd = e.formData;
+			
+			// データをセット
+			fd.set('part[]', text);
+		});
+		form.submit();
 	}
 	
 }
