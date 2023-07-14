@@ -17,6 +17,6 @@ $result = $sql->fetchAll();
 
 //表示
 $smarty->assign("dataList",$result);
-$smarty->assign("beforePath","../muscle/MuscleProteinPage.php");
+$smarty->assign("beforePath","../muscle/ProteinPage.php");
 $smarty->display("MuscleProteinList.tpl");
 ?>
