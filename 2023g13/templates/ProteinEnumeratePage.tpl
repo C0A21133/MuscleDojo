@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="../cssFolder/TestPage.css">
         <link rel="stylesheet" href="../cssFolder/Footer.css">
     </head>
-    <body onload="Draw()">
+    <body >
         <div class="bg_img">
         <div class="bg_opacity">    
 
