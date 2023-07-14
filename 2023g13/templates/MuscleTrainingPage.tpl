@@ -14,7 +14,7 @@
                 <header id="header">
                     <h1 class="title">マッスル道場</h1>
                     <ul class="header-list">
-                        <li class="header-item"><a href="">トップページ</a></li>
+                        <li class="header-item"><a href="../muscle/TestPage.php">トップページ</a></li>
                         <li class="header-item"><a href="../muscle/MuscleTrainingList.php">トレーニング一覧</a></li>
                         <li class="header-item"><a href="../muscle/MuscleProteinList.php">プロテイン一覧</a></li>
                     </ul>

@@ -30,7 +30,7 @@
                 </tr>
                 {{foreach $dataList as $data}}
                     <tr>
-                    <td><a href="../muscle/ProteinPage.php/?id={$data["protein_id"]}">{{$data["protein_name"]}}</a></td>
+                    <td><a href="../muscle/ProteinPage.php?id={$data["protein_id"]}">{{$data["protein_name"]}}</a></td>
                     <td>{$data["protein_price"]}</td>
                     <td>{$data["protein_target"]}</td>
                     <td>{$data["protein_maker"]}</td>

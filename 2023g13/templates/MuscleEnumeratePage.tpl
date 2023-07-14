@@ -16,7 +16,7 @@
             <header id="header">
             <h1 class="title">マッスル道場</h1>
             <ul class="header-list">
-                <li class="header-item"><a href="">トップページ</a></li>
+                <li class="header-item"><a href="../muscle/TestPage.php">トップページ</a></li>
                 <li class="header-item"><a href="../muscle/MuscleTrainingList.php">トレーニング一覧</a></li>
                 <li class="header-item"><a href="../muscle/MuscleProteinList.php">プロテイン一覧</a></li>
             </ul>
@@ -33,7 +33,7 @@
     {{foreach $resultList as $data}}
     <!-- $data = ["id", "name", "level", ["part"], ["target"]]  -->
         <tr>
-            <td> <a href="../muscle/MuscleTrainingPage.php/?id={$data[0]}">{$data[1]}</a></td>
+            <td> <a href="../muscle/MuscleTrainingPage.php?id={$data[0]}">{$data[1]}</a></td>
             <td>{$data[2]}</td>
             <td>{{foreach $data[3] as $part}} {$part} {{/foreach}}</td>
             <td>{{foreach $data[4] as $target}} {$target} {{/foreach}}</td>
