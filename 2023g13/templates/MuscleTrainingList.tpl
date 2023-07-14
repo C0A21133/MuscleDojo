@@ -3,7 +3,6 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="../cssFolder/TestPage.css">
-        <link rel="stylesheet" href="../cssFolder/MuscleTrainingList.css">
         <title>トレーニング一覧 | マッスル道場</title>
         <link rel="stylesheet" href="../cssFolder/Header.css">
         <link rel="stylesheet" href="../cssFolder/Footer.css">
