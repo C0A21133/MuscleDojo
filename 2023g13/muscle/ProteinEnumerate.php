@@ -36,19 +36,23 @@ if(isset($_POST["target"])){
     }
 }
 
+if(isset($_POST["target_list"])){
+    $target = explode("_", $_POST["target_list"]);
+    array_pop($target);
+    $command = " AND (";
+    foreach($target as $data){
+        $command .= " protein_target='" . $data ."' OR";
+    }
+    $command = substr($command, 0, -2);
+    $protein_command .= $command . " )";
+}
+
+
 //idと名前を取得
 $sql = $pdo->prepare($protein_command);
 $sql->execute();
 $result = $sql->fetchAll();
 
-$column = 'SHOW COLUMNS FROM table_protein';
-$stmh = $pdo->prepare($column);
-$stmh -> execute();
-while($row = $stmh->fetch(PDO::FETCH_ASSOC)){
-$rows[]=$row;
-}
-
 $smarty->assign("dataList", $result);
-$smarty->assign("Column", $rows);
 $smarty->display('ProteinEnumeratePage.tpl');
 ?>
