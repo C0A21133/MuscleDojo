@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="../cssFolder/Header.css">
         <link rel="stylesheet" href="../cssFolder/Footer.css">
         <link rel="stylesheet" href="../cssFolder/TestPage.css">
-                
+        <link rel="stylesheet" href="../cssFolder/bg.css">
         <script src="../Script/Header.js" defer></script>
         <script src="../Script/StartPage.js" defer></script>
     </head>    
@@ -96,7 +96,7 @@
                 <footer>
                     <h3 id="test">マッスル道場</h3>
                     <ul class="footer-list">
-                        <li class="footer-item"><a href="">トップページ</a></li>
+                        <li class="footer-item"><a href="../muscle/TestPage.php">トップページ</a></li>
                         <li class="footer-item"><a href="../muscle/MuscleTrainingList.php">トレーニング一覧</a></li>
                         <li class="footer-item"><a href="../muscle/MuscleProteinList.php">プロテイン一覧</a></li>
                         <li class="footer-item"><a href="../muscle/DBadmin.php">管理者用ページ</a></li>
