@@ -9,6 +9,10 @@ body {
     padding: 0;
 }
 
+main{
+    min-height: 660px;
+}
+
 .bg_opacity {
     display: flex;
     flex-direction: column;
