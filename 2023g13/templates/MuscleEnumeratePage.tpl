@@ -19,6 +19,7 @@
         <th>おすすめプロテイン</th>
     </tr>
     {{foreach $resultList as $data}}
+    <!-- $data = ["id", "name", "level", ["part"], ["target"]]  -->
         <tr>
             <td> <a href="../muscle/MuscleTrainingPage.php/?id={$data[0]}">{$data[1]}</a></td>
             <td>{$data[2]}</td>
