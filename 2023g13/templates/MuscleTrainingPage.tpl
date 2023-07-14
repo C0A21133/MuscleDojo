@@ -3,10 +3,10 @@
     <head>
         <title>{$trainingData["training_name"]} | マッスル道場</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="../../cssFolder/Header.css">
-        <link rel="stylesheet" href="../../cssFolder/Footer.css">
-        <link rel="stylesheet" href="../../cssFolder/bg.css">
-        <script src="../../Script/Header.js" defer></script>
+        <link rel="stylesheet" href="../cssFolder/Header.css">
+        <link rel="stylesheet" href="../cssFolder/Footer.css">
+        <link rel="stylesheet" href="../cssFolder/bg.css">
+        <script src="../Script/Header.js" defer></script>
     </head>
     <body>
         <div class="bg_img">
