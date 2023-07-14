@@ -30,7 +30,6 @@
                     <a href="javascript:FORM{$data[0]}.submit()">検索</a>
                 </form>
             </td>
-            {$data[4][0]}
     {{{/foreach}}}
     </table>
     <footer>

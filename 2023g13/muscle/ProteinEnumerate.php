@@ -31,7 +31,6 @@ if(isset($_POST["weight"])&& $_POST["weight"]!=""){
 }
 if(isset($_POST["target"])){
     $target = $_POST["target"];
-    print_r($target);
     foreach($target as $data){
         $protein_command .= " AND protein_target='" . $data ."'";
     }
