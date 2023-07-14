@@ -26,10 +26,11 @@
             <td>{{foreach $data[4] as $target}} {$target} {{/foreach}}</td>
             <td>
                 <form method="POST" name="FORM{$data[0]}"  action="../muscle/ProteinEnumerate.php"> 
-                    <input type="hidden" name="target[]" value="{$data[4]}"> 
+                    <input type="hidden" name="target_list" value="{{foreach $data[4] as $target}}{$target}_{{{/foreach}}}"> 
                     <a href="javascript:FORM{$data[0]}.submit()">検索</a>
                 </form>
             </td>
+            {$data[4][0]}
     {{{/foreach}}}
     </table>
     <footer>
