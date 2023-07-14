@@ -27,7 +27,7 @@
                     <ul>
                         <!--phpから送られてきたデータの配列からtraining_idをpathのクエリパラメータに、画面には、training_nameを表示する-->
                         {{foreach $dataList as $data}}
-                            <li><h3><a href="{$beforePath}/?id={$data["training_id"]}">{$data["training_name"]}</a></h3></li>    
+                            <li><h3><a href="{$beforePath}?id={$data["training_id"]}">{$data["training_name"]}</a></h3></li>    
                         {{/foreach}}
                     </ul>
                 </main>
