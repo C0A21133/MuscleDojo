@@ -61,6 +61,7 @@
                             トレーニング名:<input type="text" name="tr_name" ><br>
                             レベル:
                             <select name="tr_level" >
+                                    <option value="-1">選択しない</option>
                                 {for $i=1 to 9}
                                     <option value="{$i}">{$i}</option>
                                 {/for}

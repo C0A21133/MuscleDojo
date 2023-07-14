@@ -22,7 +22,7 @@ $result_list = [];
 $id_list = [];
 
 //検索するためのsql文作成
-if(isset($_POST["tr_level"])){
+if(isset($_POST["tr_level"]) && $_POST["tr_level"] != -1){
     $level = (int)$_POST["tr_level"];
     $search_command .= " AND training_level=" . $level;
 }
