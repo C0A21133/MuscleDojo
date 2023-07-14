@@ -1,0 +1,22 @@
+body{
+    overflow: scroll;
+}
+
+main{
+    width: 100%;
+}
+
+.bg_img{
+    position: relative;
+    /* height: 100%;
+    min-height: 100%; */
+    width: 100%;
+    background-size: cover;
+    background-image: url("../Resources/Images/Background/bg.jpg");
+}
+.bg_opacity{
+    position: relative;
+    /* height: 100%; */
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+}

@@ -2,20 +2,21 @@
     box-sizing: border-box;
 }
 
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-.bg_opacity{
+.bg_opacity {
     display: flex;
     flex-direction: column;
 }
-   
 
 
-footer{
+
+footer {
     width: 100%;
     margin-bottom: 0;
     margin-top: auto;
@@ -23,19 +24,21 @@ footer{
     color: white;
     background-color: black;
 }
-footer .footer-list{
+
+footer .footer-list {
     text-align: left;
     padding: 10px 0;
     margin: 0 auto;
 }
-footer .footer-item{
+
+footer .footer-item {
     list-style: none;
     display: block;
     margin: 0 20px;
     font-weight: bold;
 }
-    
-footer .footer-item a{
+
+footer .footer-item a {
     color: white;
     text-decoration: none;
 }
