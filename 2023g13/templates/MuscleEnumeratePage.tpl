@@ -18,22 +18,6 @@
         <th>目的</th>
         <th>おすすめプロテイン</th>
     </tr>
-    <!--
-        {{foreach $datalist as $data}}
-            <tr>
-                <td><a href="../muscle/MuscleTrainingPage.php/?id={$data["training_id"]}">{{$data["training_name"]}}</a></td>
-                <td>{{$data["training_level"]}}</td>
-                <td>{{$data["part"]}}</td>
-                <td>{{$data["target"]}}</td>
-                <td>
-                    <form method="POST" name="FORM{$data["training_id"]}"  action="../muscle/ProteinEnumerate.php"> 
-                        <input type="hidden" name="target[]" value="{$data["target"]}"> 
-                        <a href="javascript:FORM{$data["training_id"]}.submit()">検索</a>
-                    </form>
-                </td>
-            </tr>
-        {{/foreach}}
-    -->
     {{foreach $resultList as $data}}
         <tr>
             <td> <a href="../muscle/MuscleTrainingPage.php/?id={$data[0]}">{$data[1]}</a></td>

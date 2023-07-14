@@ -16,8 +16,12 @@ $search_command = "SELECT * FROM table_training
     INNER JOIN table_protein ON table_target.target = table_protein.protein_target 
     WHERE ";
 
+//["id", "name", "level", ["part"], ["target"]]
+$result_list = [];
+//検索した結果のtraining_idを重複なしで保持
+$id_list = [];
 
-
+//検索するためのsql文作成
 if(isset($_POST["tr_level"])){
     $level = (int)$_POST["tr_level"];
     $search_command .= "training_level=" . $level;
@@ -27,7 +31,6 @@ if(isset($_POST["tr_name"]) && $_POST["tr_name"] != ""){
     $name = (string)$_POST["tr_name"];
     $search_command .= " AND training_name='" . $name ."'";
 }
-
 
 if(isset($_POST["part"])){
     $part = $_POST["part"];
@@ -48,29 +51,25 @@ if(isset($_POST["target"])){
     $search_command .= $command . ")";
 }
 
-
 //idと名前を取得
 $search_sql = $pdo->prepare($search_command);
 $search_sql->execute();
 $search_result = $search_sql->fetchAll();
 
-//["id", "name", "level", ["part"], ["target"]]
-$result_list = [];
-
 //重複なしの検索結果
-$id_list = [];
 foreach($search_result as $data){
     $id_list[] =  $data["training_id"];
 }
 $id_list = array_unique($id_list);
 
-$part_command = "SELECT part FROM table_part WHERE ";
-$target_command = "SELECT target FROM table_target WHERE ";
-
+//training_id を持つデータresult_listにまとめる
 foreach($id_list as $num){
     $part_command = "SELECT part FROM table_part WHERE ";
     $target_command = "SELECT target FROM table_target WHERE ";
     $training_command = "SELECT * FROM  table_training WHERE ";
+
+    $target_list = [];
+    $part_list = [];
 
     $target_command .= "training_id=" . $num;
     $part_command .= "training_id=" . $num;
@@ -79,16 +78,22 @@ foreach($id_list as $num){
     $part_sql = $pdo->prepare($part_command);
     $part_sql->execute();
     $part_result = $part_sql->fetchAll();
-    
+    foreach($part_result as $data){
+        $part_list[] =  $data["part"];
+    }
+
     $target_sql = $pdo->prepare($target_command);
     $target_sql->execute();
     $target_result = $target_sql->fetchAll();
+    foreach($target_result as $data){
+        $target_list[] =  $data["target"];
+    }
 
     $training_sql = $pdo->prepare($training_command);
     $training_sql->execute();
     $training_result = $training_sql->fetchAll();
 
-    $result_list[] = [$num ,$training_result[0]["training_name"], $training_result[0]["training_level"], $part_result[0],$target_result[0]];
+    $result_list[] = [$num ,$training_result[0]["training_name"], $training_result[0]["training_level"], $part_list,$target_list];
 }
 
 
